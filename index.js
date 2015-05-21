@@ -1,9 +1,9 @@
 'use strict'
 
-var BN = require('bn.js')
 var isRat = require('./is-rat')
 var isBN = require('./lib/is-bn')
 var num2bn = require('./lib/num-to-bn')
+var str2bn = require('./lib/str-to-bn')
 var rationalize = require('./lib/rationalize')
 var mul = require('./mul')
 
@@ -21,9 +21,9 @@ function makeRational(numer, denom) {
   if(isBN(numer)) {
     a = numer
   } else if(typeof numer === 'string') {
-    a = new BN(numer)
+    a = str2bn(numer)
   } else if(numer === 0) {
-    return [new BN(0), new BN(1)]
+    return [num2bn(0), num2bn(1)]
   } else if(numer === Math.floor(numer)) {
     a = num2bn(numer)
   } else {
@@ -33,10 +33,13 @@ function makeRational(numer, denom) {
     }
     a = num2bn(numer)
   }
-  if(isBN(denom)) {
+  if(isRat(denom)) {
+    a = a.mul(denom[1])
+    b = denom[0])
+  } else if(isBN(denom)) {
     b = denom
   } else if(typeof denom === 'string') {
-    b = new BN(denom)
+    b = str2bn(denom)
   } else if(!denom) {
     b = num2bn(1)
   } else if(denom === Math.floor(denom)) {
@@ -53,5 +56,5 @@ function makeRational(numer, denom) {
   } else if(shift < 0) {
     b = b.shln(-shift)
   }
-  return rationalize([a, b])
+  return rationalize(a, b)
 }
