@@ -59,35 +59,44 @@ Constructs a rational number as the quotient n/d
 **Returns** A rational number
 
 #### `var f = require('big-rat/to-float')(r)`
-Rounds a rational number to the closest representable float
-
-* `r` is a big rat
 
 **Returns** The closest floating point number to `r`
 
 #### `var s = require('big-rat/to-string')(r)`
-Converts a big rat into a string
 
-* `r` is a big rat
-
-**Returns** A string representing `r`
+**Returns** A string representing the big rat `r`
 
 #### `var b = require('big-rat/is-rat')(r)`
-Test if an object is a big-rat
-
-* `r` is any variable
 
 **Returns** `true` if `r` is a big rat
 
 #### `var c = require('big-rat/add')(a, b)`
 
+**Returns** `a+b`
+
 #### `var c = require('big-rat/sub')(a, b)`
+
+**Returns** `a-b`
 
 #### `var c = require('big-rat/mul')(a, b)`
 
+**Returns** `a*b`
+
 #### `var c = require('big-rat/div')(a, b)`
 
+**Returns** `a/b`
+
+#### `var c = require('big-rat/neg')(a)`
+
+**Returns** `-a`
+
 #### `var c = require('big-rat/recip')(a)`
+
+**Returns** `1/a`
+
+#### `var c = require('big-rat/sign')(a)`
+
+#### `var c = require('big-rat/abs')(a)`
 
 #### `var c = require('big-rat/min')(a, b)`
 
