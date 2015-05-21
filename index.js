@@ -35,7 +35,7 @@ function makeRational(numer, denom) {
   }
   if(isRat(denom)) {
     a = a.mul(denom[1])
-    b = denom[0])
+    b = denom[0]
   } else if(isBN(denom)) {
     b = denom
   } else if(typeof denom === 'string') {

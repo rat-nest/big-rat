@@ -1,6 +1,6 @@
 'use strict'
 
-var rationalize = require('./rationalize')
+var rationalize = require('./lib/rationalize')
 
 module.exports = mul
 

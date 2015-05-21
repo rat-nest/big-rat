@@ -1,12 +1,14 @@
 'use strict'
 
-var bn2num = require('./bn-to-num')
-var ctz = require('./ctz')
+var bn2num = require('./lib/bn-to-num')
+var ctz = require('./lib/ctz')
 
 module.exports = roundRat
 
 //Round a rational to the closest float
-function roundRat(a, b) {
+function roundRat(f) {
+  var a = f[0]
+  var b = f[1]
   if(a.cmpn(0) === 0) {
     return 0
   }
