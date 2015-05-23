@@ -4,7 +4,6 @@ Arbitrary precision rational number arithmetic
 
 # Example
 
-
 #### Program
 
 ```javascript
@@ -96,15 +95,35 @@ Constructs a rational number as the quotient n/d
 
 #### `var c = require('big-rat/sign')(a)`
 
+**Returns** One of the following values:
+
+* `-1` if `a<0`
+* `0` if `a=0`
+* `+1` if `a>0`
+
 #### `var c = require('big-rat/abs')(a)`
+
+**Returns** `|a|`
 
 #### `var c = require('big-rat/min')(a, b)`
 
+**Returns** `min(a,b)`
+
 #### `var c = require('big-rat/max')(a, b)`
+
+**Returns** `max(a,b)`
 
 #### `var c = require('big-rat/equals')(a, b)`
 
+**Returns** `true` if `a=b`, `false` otherwise
+
 #### `var c = require('big-rat/cmp')(a, b)`
+
+**Returns**
+
+* `-1` if `a<b`
+* `0` if `a=b`
+* `+1` if `a>b`
 
 # License
 
