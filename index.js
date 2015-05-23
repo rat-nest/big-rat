@@ -19,7 +19,7 @@ function makeRational(numer, denom) {
   var shift = 0
   var a, b
   if(isBN(numer)) {
-    a = numer
+    a = numer.clone()
   } else if(typeof numer === 'string') {
     a = str2bn(numer)
   } else if(numer === 0) {
@@ -34,10 +34,10 @@ function makeRational(numer, denom) {
     a = num2bn(numer)
   }
   if(isRat(denom)) {
-    a = a.mul(denom[1])
-    b = denom[0]
+    a.mul(denom[1])
+    b = denom[0].clone()
   } else if(isBN(denom)) {
-    b = denom
+    b = denom.clone()
   } else if(typeof denom === 'string') {
     b = str2bn(denom)
   } else if(!denom) {

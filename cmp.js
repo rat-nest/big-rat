@@ -3,5 +3,5 @@
 module.exports = cmp
 
 function cmp(a, b) {
-  return a[0].mul(b[1]).cmp(a[1].mul(b[0]))
+  return a[0].mul(b[1]).cmp(b[0].mul(a[1]))
 }

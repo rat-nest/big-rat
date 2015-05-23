@@ -37,6 +37,7 @@
     "double-bits": "^1.1.1"
   },
   "devDependencies": {
+    "signum": "^1.0.0",
     "tape": "^4.0.0"
   }
 }

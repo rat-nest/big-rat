@@ -17,7 +17,6 @@ tape('to-float: small integers', function(t) {
 
 
 tape('to-float: selected cases', function(t) {
-
   verify(t, 0)
   verify(t, 0.1)
   verify(t, 0.2)
@@ -32,7 +31,6 @@ tape('to-float: selected cases', function(t) {
 })
 
 tape('to-float: powers of 2', function(t) {
-
   for(var i=-1075; i<1024; ++i) {
     verify(t, Math.pow(2, i))
   }
@@ -41,7 +39,6 @@ tape('to-float: powers of 2', function(t) {
 })
 
 tape('to-float: fuzz', function(t) {
-
   for(var i=-1075; i<1023; ++i) {
     for(var j=0; j<50; ++j) {
       verify(t, Math.random() * Math.pow(2, i))
