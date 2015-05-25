@@ -28,9 +28,13 @@ tape('string ctor', function(t) {
 tape('rational ctor', function(t) {
   var x = rat('5', '6')
   var y = rat(x)
+  var z = rat(y, y)
 
   t.equals(x[0].toString(), y[0].toString())
   t.equals(x[1].toString(), y[1].toString())
+
+  t.equals(z[0].toString(), '1')
+  t.equals(z[1].toString(), '1')
 
   t.end()
 })

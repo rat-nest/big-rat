@@ -5,16 +5,16 @@ var isBN = require('./lib/is-bn')
 var num2bn = require('./lib/num-to-bn')
 var str2bn = require('./lib/str-to-bn')
 var rationalize = require('./lib/rationalize')
-var mul = require('./mul')
+var div = require('./div')
 
 module.exports = makeRational
 
 function makeRational(numer, denom) {
   if(isRat(numer)) {
     if(denom) {
-      return mul(numer, makeRational(denom))
+      return div(numer, makeRational(denom))
     }
-    return numer
+    return [numer[0].clone(), numer[1].clone()]
   }
   var shift = 0
   var a, b
