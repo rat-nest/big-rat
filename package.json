@@ -1,6 +1,6 @@
 {
   "name": "big-rat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A big integer rational number",
   "main": "index.js",
   "scripts": {
