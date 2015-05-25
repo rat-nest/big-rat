@@ -2,6 +2,8 @@ big-rat
 =======
 Arbitrary precision rational number arithmetic
 
+[![build status](https://secure.travis-ci.org/rat-nest/big-rat.png)](http://travis-ci.org/rat-nest/big-rat)
+
 # Example
 
 #### Program
