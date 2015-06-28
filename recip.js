@@ -3,5 +3,5 @@
 module.exports = recip
 
 function recip(f) {
-  return [f[1], f[0]]
+  return [f[1].clone(), f[0].clone()]
 }
