@@ -33,11 +33,11 @@
   "homepage": "https://github.com/rat-nest/big-rat",
   "dependencies": {
     "bit-twiddle": "^1.0.2",
-    "bn.js": "^2.0.5",
+    "bn.js": "^3.1.1",
     "double-bits": "^1.1.1"
   },
   "devDependencies": {
     "signum": "^1.0.0",
-    "tape": "^4.0.0"
+    "tape": "^4.2.0"
   }
 }
