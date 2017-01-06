@@ -26,6 +26,7 @@ tape('to-float: selected cases', function(t) {
   verify(t, 0.25)
   verify(t, 0.9)
   verify(t, 11111.11111)
+  verify(t, -155.87571739999998)
 
   t.end()
 })
