@@ -32,7 +32,7 @@ test('more words (negative)', function(t) {
 test('powers of 2', function(t) {
   for(var i=0; i<1024; ++i) {
     var x = Math.pow(2, i)
-    var y = (new bn(1)).shln(i)
+    var y = (new bn(1)).ushln(i)
     t.same(toFloat(y), x, x)
     t.same(toFloat(y.neg()), -x, -x)
   }

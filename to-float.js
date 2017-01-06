@@ -21,7 +21,7 @@ function roundRat(f) {
   }
   if(x) {
     var s = ctz(x) + 4
-    var y = bn2num(ir.shln(s).divRound(b))
+    var y = bn2num(ir.ushln(s).divRound(b))
 
     // flip the sign of y if x is negative
     if (x<0) {
@@ -31,7 +31,7 @@ function roundRat(f) {
     return x + y * Math.pow(2, -s)
   } else {
     var ybits = b.bitLength() - ir.bitLength() + 53
-    var y = bn2num(ir.shln(ybits).divRound(b))
+    var y = bn2num(ir.ushln(ybits).divRound(b))
     if(ybits < 1023) {
       return y * Math.pow(2, -ybits)
     }
