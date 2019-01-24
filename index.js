@@ -56,5 +56,5 @@ function makeRational(numer, denom) {
   } else if(shift < 0) {
     b = b.ushln(-shift)
   }
-  return rationalize(a, b)
+  return denom != null ? rationalize(a, b) : [a, num2bn(1)]
 }
